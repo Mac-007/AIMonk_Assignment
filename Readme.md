@@ -216,7 +216,7 @@ Also, it shows the output on the feature rich UI, as shown in Results section.
 ## 9. Author / Contact
 
 
-**Dr. Amit Chougule, PhD**   
+**Author**: `Dr. Amit Chougule, PhD` 
 
 📧 Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
 ---
