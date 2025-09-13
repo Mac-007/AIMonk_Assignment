@@ -3,7 +3,7 @@
 
 This repo contains two services that together implement an image object-detection microservice:
 
-* **UI backend (Flask)** — simple web UI to upload images and display results.
+* **UI backend (Flask)** — Next-gen Web UI UI to upload images and display results.
 * **AI backend (FastAPI + YOLO)** — accepts images, runs object detection, saves an annotated image and a JSON file with detections, and returns structured results.
 
 ---
@@ -13,7 +13,6 @@ This repo contains two services that together implement an image object-detectio
 1. **Docker & Docker Compose** (recommended) OR
 2. **Python 3.8+** and `pip` (for local runs)
 3. Internet access on first run (the YOLO model weights are downloaded automatically unless already cached)
-4. (Optional) GPU + CUDA if you want GPU inference — update Docker images / host accordingly.
 
 ---
 
@@ -112,7 +111,7 @@ docker-compose down
 
 ---
 
-## 2. Local Development (no Docker)
+## 2. Local Development 
 
 Run the AI backend and UI backend locally on your machine.
 
@@ -171,10 +170,10 @@ Example (trimmed) JSON response:
 {
   "detections": [
     {
-      "class_id": 0,
-      "class": "person",
-      "confidence": 0.8734,
-      "bbox": {"xmin": 34.5, "ymin": 45.2, "xmax": 120.7, "ymax": 220.3}
+      "class_id": 16,
+      "class": "dog",
+      "confidence": 0.79,
+      "bbox": {"xmin": 90.2, "ymin": 262.4, "xmax": 995.1, "ymax": 1058.1}
     }
   ],
   "image_path": "outputs/images/2f3b8a6a-....jpg",
@@ -194,23 +193,7 @@ Example (trimmed) JSON response:
 
 When running with Docker Compose, `./AI_Backend/outputs` is typically mounted to the host (per the compose file), so you can access outputs directly from your filesystem.
 
----
-
-## 5. Packaging / Deliverables (what to send)
-
-1. Project folder zipped (maintain same relative paths). Example:
-
-```bash
-zip -r submission.zip AI_Backend UI_Backend docker-compose.yaml README.md outputs
-```
-
-2. Documentation: include a short `DOCUMENTATION.md` describing:
-
-   * steps you took to implement
-   * references and links
-   * any changes you made to sample code
-3. Example outputs: include a few annotated images and their JSON files (from `AI_Backend/outputs`).
-
+Also, it shows the output on the feature rich UI, as shown in Results section.
 ---
 
 ## 6. Troubleshooting & Tips
@@ -236,9 +219,10 @@ zip -r submission.zip AI_Backend UI_Backend docker-compose.yaml README.md output
 
 ## 9. Author / Contact
 
-Dr. Amit Chougule, PhD
-[amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
 
+**Dr. Amit Chougule, PhD**   
+
+📧 Email: [amitchougule121@gmail.com](mailto:amitchougule121@gmail.com)
 ---
 
 
