@@ -53,8 +53,22 @@ AIMonk_Assignment
 │ │ ├── index.html
 │ │ ├── result.html
 │ ├── static/             # (optional)
+│
+├── Results
+│ ├──
+│ ├──
 
 ```
+
+--
+
+## Results
+
+<p float="left">
+  <img src="Results/UI_1.jpg" width="400" />
+  <img src="Results/Detection_with_Classification_Output_on_UI.jpg" width="400" />
+</p>
+
 
 --
 
