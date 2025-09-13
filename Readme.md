@@ -3,7 +3,7 @@
 
 This repo contains two services that together implement an image object-detection microservice:
 
-* **UI backend (Flask)** — Next-gen Web UI UI to upload images and display results.
+* **UI backend (Flask)** — Next-gen Web UI to upload images and display results.
 * **AI backend (FastAPI + YOLO)** — accepts images, runs object detection, saves an annotated image and a JSON file with detections, and returns structured results.
 
 ---
@@ -54,8 +54,8 @@ AIMonk_Assignment
 │ ├── static/             # (optional)
 │
 ├── Results
-│ ├──
-│ ├──
+│ ├── UI_1.jpg
+│ ├── Detection_with_Classification_Output_on_UI.jpg
 
 ```
 
@@ -199,15 +199,11 @@ Also, it shows the output on the feature rich UI, as shown in Results section.
 ## 6. Troubleshooting & Tips
 
 * **Model download stalls or fails**: first run downloads weights; ensure container/host has internet.
-* **Slow CPU inference**: CPU-only inference is slower—use `yolov5s` (already used) or `yolov5n` for speed. To use GPU, ensure correct torch & CUDA match and change `model.to("cuda")`.
-* **Permission errors with volumes**: check directory ownership and adjust permissions (e.g., `chmod -R 755 AI_Backend/outputs`).
 * **Path issues when copying annotated images**: ensure you run Flask from repo root (compose ensures paths), or update path logic in `ui_backend.py`.
 * **Port in use**: change ports in `docker-compose.yaml` or stop the service occupying that port.
 * **Torch compatibility**: if `torch` install fails in slim images, consider using `pytorch` official images or a fuller base image with system dependencies.
 
 ---
-
-
 
 ## 8. References
 
