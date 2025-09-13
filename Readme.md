@@ -36,24 +36,23 @@ This repo contains two services that together implement an image object-detectio
 ## 📂 Project Structure
 '''
 AIMonk_Assignment
-|
-|-- docker-compose.yml
-|
-|-- AI_Backend
-|   |-- ai_backend.py
-|   |-- requirements.txt
-|   |-- Dockerfile
-|   |-- outputs/            # (optional; will be created)
-|
-|-- UI_Backend
-|   |-- ui_backend.py
-|   |-- requirements.txt
-|   |-- Dockerfile
-|   |-- templates
-|   |   |-- index.html
-|   |   |-- result.html
-|   |
-|   |-- static/             # (optional)
+│
+├── docker-compose.yml
+│
+├── AI_Backend
+│ ├── ai_backend.py
+│ ├── requirements.txt
+│ ├── Dockerfile
+│ ├── outputs/            # (optional; will be created)
+│
+├── UI_Backend
+│ ├── ui_backend.py
+│ ├── requirements.txt
+│ ├── Dockerfile
+│ ├── templates
+│ │ ├── index.html
+│ │ ├── result.html
+│ ├── static/             # (optional)
 
 '''
 --
