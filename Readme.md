@@ -64,8 +64,12 @@ AIMonk_Assignment
 
 ## Results
 
-<p float="left">
-  <img src="Results/UI_1.jpg" width="400" />
+<p align="center">
+
+  <img src="Results/UI_1.jpg" width="600" />
+</p>
+
+<p align="center">
   <img src="Results/Detection_with_Classification_Output_on_UI.jpg" width="400" />
 </p>
 
