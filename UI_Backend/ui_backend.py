@@ -4,7 +4,11 @@ import os
 from werkzeug.utils import secure_filename
 import shutil
 
-AI_BACKEND_URL = "http://127.0.0.1:8000/predict/"
+#AI_BACKEND_URL = "http://127.0.0.1:8000/predict/"
+
+# Read from docker-compose env (default to localhost if not set)
+AI_BACKEND_URL = os.getenv("AI_BACKEND_URL", "http://127.0.0.1:8000/predict/")
+
 UPLOAD_FOLDER = "ui_uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
