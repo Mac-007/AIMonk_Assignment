@@ -34,7 +34,7 @@ This repo contains two services that together implement an image object-detectio
 
 
 ## 📂 Project Structure
-'''
+```
 AIMonk_Assignment
 │
 ├── docker-compose.yml
@@ -54,7 +54,8 @@ AIMonk_Assignment
 │ │ ├── result.html
 │ ├── static/             # (optional)
 
-'''
+```
+
 --
 
 ## 1. Quick Start — Docker (recommended)
