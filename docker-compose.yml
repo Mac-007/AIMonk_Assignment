@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  ai_backend:
+    build: ./AI_Backend
+    container_name: ai_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./AI_Backend/outputs:/app/outputs    # optional: persist outputs to host
+    restart: unless-stopped
+
+  ui_backend:
+    build: ./UI_Backend
+    container_name: ui_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - AI_BACKEND_URL=http://ai_backend:8000/predict/
+    volumes:
+      - ./UI_Backend/static:/app/static
+    depends_on:
+      - ai_backend
+    restart: unless-stopped
